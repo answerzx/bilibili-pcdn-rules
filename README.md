@@ -4,10 +4,23 @@ B 站 PCDN / MCDN / P2P CDN 屏蔽规则。
 
 用途：用于 OpenWrt Nikki / Mihomo / OpenClash 的 rule-provider。
 
-## Raw 地址
+## 推荐 Raw 地址
 
 ```text
-https://raw.githubusercontent.com/answerzx/bilibili-pcdn-rules/main/bilibili-pcdn.yaml
+https://raw.githubusercontent.com/answerzx/bilibili-pcdn-rules/main/bilibili-pcdn.list
+```
+
+## 格式
+
+```yaml
+behavior: classical
+format: text
+```
+
+也就是你配置里的：
+
+```yaml
+class: &class {type: http, interval: 86400, behavior: classical, format: text}
 ```
 
 ## 建议策略
