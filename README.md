@@ -7,7 +7,7 @@ B 站 PCDN / MCDN / P2P CDN 屏蔽规则。
 ## 推荐 Raw 地址
 
 ```text
-https://raw.githubusercontent.com/answerzx/bilibili-pcdn-rules/main/bilibili-pcdn.list
+https://raw.githubusercontent.com/answerzx/bilibili-pcdn-rules/main/bilibili-pcdn-classical.list
 ```
 
 ## 格式
