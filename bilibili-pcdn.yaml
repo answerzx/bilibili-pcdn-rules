@@ -1,0 +1,19 @@
+# Bilibili PCDN block rules for Nikki / Mihomo
+# 用途：屏蔽 B 站 PCDN / MCDN / P2P CDN 相关域名。
+# 建议动作：REJECT 或 REJECT-DROP。
+# 保守原则：不屏蔽 *.bilivideo.com、cn-*.bilivideo.com、upos-sz-mirror*.bilivideo.com，避免误伤正常视频 CDN。
+
+payload:
+  # B 站 MCDN / PCDN 视频节点，高置信
+  - DOMAIN-SUFFIX,mcdn.bilivideo.cn
+  - DOMAIN-SUFFIX,mcdn.bilivideo.com
+  - DOMAIN-SUFFIX,szbdyd.com
+
+  # B 站 PCDN tracker / 控制域名，高置信
+  - DOMAIN,ks-sh-tracker-02.biliapi.net
+  - DOMAIN-REGEX,^.*-pcdn-.*\.biliapi\.net$
+  - DOMAIN-REGEX,^.*pcdn.*\.biliapi\.net$
+
+  # B 站 P2P / STUN 相关。若你使用直播互动/聊天室后出现异常，可先注释这两条。
+  - DOMAIN-REGEX,^stun.*\.chat\.bilibili\.com$
+  - DOMAIN-REGEX,^.*-p2p-.*\.chat\.bilibili\.com$
